@@ -1,0 +1,18 @@
+<div class="register">
+    <img  src="../../assets/images/LogoSAI.PNG" alt="Logo">
+    <h1>Register an account</h1>
+
+    <label>User</label>
+    <input type="text" [(ngModel)]="user" placeholder="Enter an user" required>
+    <label>Email</label>
+    <input type="email" [(ngModel)]="email" placeholder="Enter an email" required>
+    <label>Password</label>
+    <input type="password" [(ngModel)]="pass1" placeholder="Enter a password" required>
+    <label>Confirm your password</label>
+    <input type="password" [(ngModel)]="pass2" placeholder="Enter your password again" required>
+    <button type="submit" (click)="register()"><a href="#">Register</a></button>
+
+    <hr>
+
+    <p>Already have an account? <a href="#">Sign in</a></p>
+</div>

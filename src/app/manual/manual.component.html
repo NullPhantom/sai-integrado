@@ -1,0 +1,19 @@
+<div class="manualMode">
+    <button class="boton" (click)="changeEngine()" [disabled]="button">
+        <img class="fan" src="assets/images/fan.png">
+        <p class="fanStatus">Ventilador</p>
+    </button>
+
+    <button class="boton" (click)="changePumb()" [disabled]="button">
+        <img class="pump" src="assets/images/pump.png">
+        <p class="pumpStatus">Bomba</p>
+    </button>
+</div>
+
+    <h2 id="status" *ngIf="this.api.mHigh_state == true && this.api.pumb_state == true">Ventilador alto frio</h2>
+    <h2 id="status" *ngIf="this.api.mHigh_state == true && this.api.pumb_state == false">Ventilador alto</h2>
+    <h2 id="status" *ngIf="this.api.mLow_state == true && this.api.pumb_state == true">Ventilador bajo frio</h2>
+    <h2 id="status" *ngIf="this.api.mLow_state == true && this.api.pumb_state == false">Ventilador bajo</h2>
+    <h2 id="status" *ngIf="this.api.mHigh_state == false && this.api.mLow_state == false && this.api.pumb_state == true">Bomba encendida</h2>
+    <h2 id="status" *ngIf="this.api.mLow_state == false && this.api.mHigh_state == false && this.api.pumb_state == false">Apagado</h2>
+    <i id="info" class="fas fa-info-circle" data-mdb-toggle="tooltip " data-mdb-placement="bottom " title="Status"></i>
